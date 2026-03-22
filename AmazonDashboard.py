@@ -1,206 +1,72 @@
-{
- "cells": [
-  {
-   "cell_type": "code",
-   "execution_count": 2,
-   "id": "1c535e8f-c1f5-468c-9161-9687544a1907",
-   "metadata": {},
-   "outputs": [
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "2026-03-22 14:39:46.177 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 14:39:46.178 No runtime found, using MemoryCacheStorageManager\n",
-      "2026-03-22 14:39:46.180 No runtime found, using MemoryCacheStorageManager\n",
-      "2026-03-22 14:39:46.180 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 14:39:46.181 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 14:39:46.182 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 14:39:46.182 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 14:39:46.255 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 14:39:46.256 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 14:39:46.256 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 14:39:46.258 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 14:39:46.259 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 14:39:46.259 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 14:39:46.261 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 14:39:46.261 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 14:39:46.262 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 14:39:46.263 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 14:39:46.263 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 14:39:46.264 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 14:39:46.264 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 14:39:46.269 Please replace `use_container_width` with `width`.\n",
-      "\n",
-      "`use_container_width` will be removed after 2025-12-31.\n",
-      "\n",
-      "For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.\n",
-      "2026-03-22 14:39:46.271 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 14:39:46.271 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 14:39:46.272 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 14:39:46.272 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 14:39:46.273 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 14:39:46.273 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 14:39:46.274 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 14:39:46.274 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 14:39:46.275 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 14:39:46.275 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 14:39:46.276 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 14:39:46.276 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 14:39:46.277 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 14:39:46.278 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 14:39:46.279 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 14:39:46.279 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 14:39:46.280 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 14:39:46.280 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 14:39:46.281 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 14:39:46.281 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 14:39:46.282 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 14:39:46.318 Please replace `use_container_width` with `width`.\n",
-      "\n",
-      "`use_container_width` will be removed after 2025-12-31.\n",
-      "\n",
-      "For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.\n",
-      "2026-03-22 14:39:46.320 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 14:39:46.320 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 14:39:46.321 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 14:39:46.322 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 14:39:46.323 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 14:39:46.324 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 14:39:46.324 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 14:39:46.325 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 14:39:46.325 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 14:39:46.326 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 14:39:46.326 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 14:39:46.349 Please replace `use_container_width` with `width`.\n",
-      "\n",
-      "`use_container_width` will be removed after 2025-12-31.\n",
-      "\n",
-      "For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.\n",
-      "2026-03-22 14:39:46.350 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 14:39:46.351 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 14:39:46.351 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 14:39:46.352 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 14:39:46.352 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 14:39:46.353 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 14:39:46.353 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 14:39:46.354 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 14:39:46.385 Please replace `use_container_width` with `width`.\n",
-      "\n",
-      "`use_container_width` will be removed after 2025-12-31.\n",
-      "\n",
-      "For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.\n",
-      "2026-03-22 14:39:46.387 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 14:39:46.388 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 14:39:46.389 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 14:39:46.389 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 14:39:46.390 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n"
-     ]
-    }
-   ],
-   "source": [
-    "import streamlit as st\n",
-    "import pandas as pd\n",
-    "import plotly.express as px\n",
-    "import plotly.graph_objects as go\n",
-    "\n",
-    "# הגדרות דף\n",
-    "st.set_page_config(page_title=\"Amazon Business Dashboard\", layout=\"wide\")\n",
-    "\n",
-    "@st.cache_data\n",
-    "def load_clean_data():\n",
-    "    # טעינת הקובץ שכבר נוקה בקובץ הקודם\n",
-    "    df = pd.read_csv('amazon_cleaned.csv')\n",
-    "    # וודא שהתאריך נקרא נכון כפורמט זמן\n",
-    "    df['order_date'] = pd.to_datetime(df['order_date'])\n",
-    "    df['month_year'] = df['order_date'].dt.to_period('M').astype(str)\n",
-    "    return df\n",
-    "\n",
-    "try:\n",
-    "    df = load_clean_data()\n",
-    "    \n",
-    "    st.title(\"📊 Amazon Category Analysis Dashboard\")\n",
-    "    \n",
-    "    # בחירת קטגוריה\n",
-    "    categories = sorted(df['main_category'].dropna().unique())\n",
-    "    selected_cat = st.sidebar.selectbox(\"בחר קטגוריה לניתוח:\", categories)\n",
-    "    \n",
-    "    filtered_df = df[df['main_category'] == selected_cat]\n",
-    "\n",
-    "    # --- 1. מד אוץ (Gauge Chart) ---\n",
-    "    avg_rating = filtered_df['rating'].mean()\n",
-    "    fig_gauge = go.Figure(go.Indicator(\n",
-    "        mode = \"gauge+number\",\n",
-    "        value = avg_rating,\n",
-    "        title = {'text': f\"מדד איכות: {selected_cat}\"},\n",
-    "        gauge = {\n",
-    "            'axis': {'range': [0, 5]},\n",
-    "            'steps': [\n",
-    "                {'range': [0, 3.5], 'color': 'red'},\n",
-    "                {'range': [3.5, 4.2], 'color': 'orange'},\n",
-    "                {'range': [4.2, 5], 'color': 'green'}\n",
-    "            ],\n",
-    "            'threshold': {'line': {'color': \"black\", 'width': 4}, 'value': 4.0}\n",
-    "        }\n",
-    "    ))\n",
-    "    st.plotly_chart(fig_gauge, use_container_width=True)\n",
-    "\n",
-    "    # --- 2. מדדי KPI ---\n",
-    "    c1, c2, c3 = st.columns(3)\n",
-    "    c1.metric(\"סה\\\"כ מוצרים\", len(filtered_df))\n",
-    "    c2.metric(\"הנחה ממוצעת\", f\"{filtered_df['discount_percentage'].mean()*100:.1f}%\")\n",
-    "    c3.metric(\"דירוג ממוצע\", f\"{avg_rating:.2f} ⭐\")\n",
-    "\n",
-    "    # --- 3. גרף מגמות חודשיות ---\n",
-    "    st.subheader(\"מגמת דירוגים (Engagement) לאורך זמן\")\n",
-    "    trend = filtered_df.groupby('month_year')['rating_count'].sum().reset_index()\n",
-    "    fig_line = px.line(trend, x='month_year', y='rating_count', markers=True)\n",
-    "    st.plotly_chart(fig_line, use_container_width=True)\n",
-    "\n",
-    "    # --- 4. התפלגות מחירים מול הנחות ---\n",
-    "    col_a, col_b = st.columns(2)\n",
-    "    with col_a:\n",
-    "        st.subheader(\"התפלגות מחירי מכירה\")\n",
-    "        fig_hist = px.histogram(filtered_df, x='discounted_price', color_discrete_sequence=['skyblue'])\n",
-    "        st.plotly_chart(fig_hist, use_container_width=True)\n",
-    "    with col_b:\n",
-    "        st.subheader(\"קשר בין הנחה לדירוג\")\n",
-    "        fig_scatter = px.scatter(filtered_df, x='discount_percentage', y='rating', size='rating_count', hover_name='product_name')\n",
-    "        st.plotly_chart(fig_scatter, use_container_width=True)\n",
-    "\n",
-    "except Exception as e:\n",
-    "    st.error(f\"שגיאה בטעינת הקובץ הנקי: {e}\")\n",
-    "    st.info(\"וודא שהרצת את קובץ הניקוי ושיצרת את 'amazon_cleaned.csv'\")"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "id": "0129946f-5590-4d2a-af92-da0489fd546d",
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  }
- ],
- "metadata": {
-  "kernelspec": {
-   "display_name": "anaconda-2025.12-py312",
-   "language": "python",
-   "name": "conda-env-anaconda-2025.12-py312-py"
-  },
-  "language_info": {
-   "codemirror_mode": {
-    "name": "ipython",
-    "version": 3
-   },
-   "file_extension": ".py",
-   "mimetype": "text/x-python",
-   "name": "python",
-   "nbconvert_exporter": "python",
-   "pygments_lexer": "ipython3",
-   "version": "3.12.12"
-  }
- },
- "nbformat": 4,
- "nbformat_minor": 5
-}
+import streamlit as st
+import pandas as pd
+import plotly.express as px
+import plotly.graph_objects as go
+
+# הגדרות דף
+st.set_page_config(page_title="Amazon Business Dashboard", layout="wide")
+
+@st.cache_data
+def load_clean_data():
+    # טעינת הקובץ הנקי
+    df = pd.read_csv('amazon_cleaned.csv')
+    # המרת תאריך
+    df['order_date'] = pd.to_datetime(df['order_date'], errors='coerce')
+    df['month_year'] = df['order_date'].dt.to_period('M').astype(str)
+    return df
+
+try:
+    df = load_clean_data()
+    
+    st.title("📊 Amazon Category Analysis Dashboard")
+    
+    # בחירת קטגוריה בסרגל הצד
+    categories = sorted(df['main_category'].dropna().unique())
+    selected_cat = st.sidebar.selectbox("בחר קטגוריה לניתוח:", categories)
+    
+    filtered_df = df[df['main_category'] == selected_cat]
+
+    # --- 1. מד אוץ (Gauge Chart) ---
+    avg_rating = filtered_df['rating'].mean()
+    fig_gauge = go.Figure(go.Indicator(
+        mode = "gauge+number",
+        value = avg_rating,
+        title = {'text': f"מדד איכות: {selected_cat}"},
+        gauge = {
+            'axis': {'range': [0, 5]},
+            'steps': [
+                {'range': [0, 3.5], 'color': 'red'},
+                {'range': [3.5, 4.2], 'color': 'orange'},
+                {'range': [4.2, 5], 'color': 'green'}
+            ],
+            'threshold': {'line': {'color': "black", 'width': 4}, 'value': 4.0}
+        }
+    ))
+    st.plotly_chart(fig_gauge, use_container_width=True)
+
+    # --- 2. מדדי KPI ---
+    c1, c2, c3 = st.columns(3)
+    c1.metric("סה\"כ מוצרים", len(filtered_df))
+    c2.metric("הנחה ממוצעת", f"{filtered_df['discount_percentage'].mean()*100:.1f}%")
+    c3.metric("דירוג ממוצע", f"{avg_rating:.2f} ⭐")
+
+    # --- 3. גרף מגמות חודשיות ---
+    st.subheader("מגמת דירוגים (Engagement) לאורך זמן")
+    trend = filtered_df.groupby('month_year')['rating_count'].sum().reset_index()
+    fig_line = px.line(trend, x='month_year', y='rating_count', markers=True)
+    st.plotly_chart(fig_line, use_container_width=True)
+
+    # --- 4. התפלגות מחירים מול הנחות ---
+    col_a, col_b = st.columns(2)
+    with col_a:
+        st.subheader("התפלגות מחירי מכירה")
+        fig_hist = px.histogram(filtered_df, x='discounted_price', color_discrete_sequence=['skyblue'])
+        st.plotly_chart(fig_hist, use_container_width=True)
+    with col_b:
+        st.subheader("קשר בין הנחה לדירוג")
+        fig_scatter = px.scatter(filtered_df, x='discount_percentage', y='rating', size='rating_count', hover_name='product_name')
+        st.plotly_chart(fig_scatter, use_container_width=True)
+
+except Exception as e:
+    st.error(f"שגיאה בטעינת הקובץ הנקי: {e}")
+    st.info("וודא שהקובץ amazon_cleaned.csv נמצא ב-GitHub באותה תיקייה.")
