@@ -10,7 +10,8 @@ st.title("📊 Amazon Sales Dashboard")
 @st.cache_data
 def load_and_clean_data():
     # טעינה - וודא שהקובץ amazon.csv נמצא ב-GitHub באותה תיקייה
-    df = pd.read_csv('amazon.csv')
+    #df = pd.read_csv('amazon.csv')
+    df = pd.read_csv('amazon_cleaned.csv')
     
     # הסרת כפילויות
     df = df.drop_duplicates(subset='product_id')
