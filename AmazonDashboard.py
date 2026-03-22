@@ -1,233 +1,89 @@
-{
- "cells": [
-  {
-   "cell_type": "code",
-   "execution_count": 3,
-   "id": "1c535e8f-c1f5-468c-9161-9687544a1907",
-   "metadata": {},
-   "outputs": [
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "2026-03-22 15:57:07.642 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 15:57:07.643 No runtime found, using MemoryCacheStorageManager\n",
-      "2026-03-22 15:57:07.644 No runtime found, using MemoryCacheStorageManager\n",
-      "2026-03-22 15:57:07.645 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 15:57:07.645 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 15:57:07.646 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 15:57:07.647 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 15:57:07.716 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 15:57:07.717 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 15:57:07.717 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 15:57:07.719 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 15:57:07.720 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 15:57:07.720 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 15:57:07.722 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 15:57:07.722 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 15:57:07.723 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 15:57:07.723 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 15:57:07.724 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 15:57:07.724 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 15:57:07.724 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 15:57:07.730 Please replace `use_container_width` with `width`.\n",
-      "\n",
-      "`use_container_width` will be removed after 2025-12-31.\n",
-      "\n",
-      "For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.\n",
-      "2026-03-22 15:57:07.731 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 15:57:07.732 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 15:57:07.732 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 15:57:07.733 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 15:57:07.733 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "/tmp/ipykernel_665/2454050619.py:68: SettingWithCopyWarning:\n",
-      "\n",
-      "\n",
-      "A value is trying to be set on a copy of a slice from a DataFrame.\n",
-      "Try using .loc[row_indexer,col_indexer] = value instead\n",
-      "\n",
-      "See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy\n",
-      "\n",
-      "/tmp/ipykernel_665/2454050619.py:70: SettingWithCopyWarning:\n",
-      "\n",
-      "\n",
-      "A value is trying to be set on a copy of a slice from a DataFrame.\n",
-      "Try using .loc[row_indexer,col_indexer] = value instead\n",
-      "\n",
-      "See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy\n",
-      "\n",
-      "2026-03-22 15:57:07.761 Please replace `use_container_width` with `width`.\n",
-      "\n",
-      "`use_container_width` will be removed after 2025-12-31.\n",
-      "\n",
-      "For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.\n",
-      "2026-03-22 15:57:07.762 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 15:57:07.763 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 15:57:07.763 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 15:57:07.764 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-22 15:57:07.764 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n"
-     ]
-    },
-    {
-     "data": {
-      "text/plain": [
-       "DeltaGenerator()"
-      ]
-     },
-     "execution_count": 3,
-     "metadata": {},
-     "output_type": "execute_result"
-    }
-   ],
-   "source": [
-    "import streamlit as st\n",
-    "import pandas as pd\n",
-    "import plotly.graph_objects as go\n",
-    "from plotly.subplots import make_subplots\n",
-    "\n",
-    "\n",
-    "# הגדרות דף רחב (כדי שיהיה מקום לעוד גרפים בהמשך)\n",
-    "st.set_page_config(page_title=\"Amazon Dashboard\", layout=\"wide\")\n",
-    "\n",
-    "@st.cache_data\n",
-    "def load_data():\n",
-    "    # טעינת הקובץ הנקי בלבד\n",
-    "    df = pd.read_csv('amazon_cleaned.csv')\n",
-    "    return df\n",
-    "\n",
-    "try:\n",
-    "    df = load_data()\n",
-    "    \n",
-    "    st.title(\"📊 Amazon Business Insights\")\n",
-    "\n",
-    "    # סרגל צד לבחירת קטגוריה\n",
-    "    categories = sorted(df['main_category'].dropna().unique())\n",
-    "    selected_cat = st.sidebar.selectbox(\"בחר קטגוריה:\", categories)\n",
-    "\n",
-    "    # סינון הנתונים\n",
-    "    filtered_df = df[df['main_category'] == selected_cat]\n",
-    "\n",
-    "    if not filtered_df.empty:\n",
-    "        # חישוב הממוצע\n",
-    "        avg_rating = filtered_df['rating'].mean()\n",
-    "\n",
-    "        # יצירת גרף המד-אוץ\n",
-    "        fig_gauge = go.Figure(go.Indicator(\n",
-    "            mode = \"gauge+number\",\n",
-    "            value = avg_rating,\n",
-    "            title = {'text': f\"מדד איכות: {selected_cat}\", 'font': {'size': 20}},\n",
-    "            gauge = {\n",
-    "                'axis': {'range': [0, 5], 'tickwidth': 1},\n",
-    "                'bar': {'color': \"black\"},\n",
-    "                'steps': [\n",
-    "                    {'range': [0, 3.5], 'color': '#FF4B4B'},\n",
-    "                    {'range': [3.5, 4.2], 'color': '#FFA500'},\n",
-    "                    {'range': [4.2, 5], 'color': '#238636'}\n",
-    "                ],\n",
-    "                'threshold': {\n",
-    "                    'line': {'color': \"white\", 'width': 4},\n",
-    "                    'thickness': 0.75,\n",
-    "                    'value': 4.0\n",
-    "                }\n",
-    "            }\n",
-    "        ))\n",
-    "\n",
-    "        fig_gauge.update_layout(height=400)\n",
-    "\n",
-    "        # הצגת הגרף\n",
-    "        st.plotly_chart(fig_gauge, use_container_width=True)\n",
-    "        \n",
-    "        # --- כאן תוכל להוסיף את הגרפים הבאים שלך ---\n",
-    "        # למשל: st.write(\"גרף נוסף יבוא כאן...\")\n",
-    "\n",
-    "except Exception as e:\n",
-    "    st.error(f\"שגיאה: {e}\")\n",
-    "\n",
-    "\n",
-    "\n",
-    "# 1. הכנת הנתונים לגרף - קיבוץ לפי חודש עבור הקטגוריה שנבחרה\n",
-    "# מבטיחים שהתאריך בפורמט הנכון\n",
-    "filtered_df['order_date'] = pd.to_datetime(filtered_df['order_date'])\n",
-    "# יצירת עמודת חודש-שנה לתצוגה על ציר ה-X\n",
-    "filtered_df['month_year'] = filtered_df['order_date'].dt.to_period('M').astype(str)\n",
-    "\n",
-    "# חישוב המדדים החודשיים (סכום מכירות וממוצע דירוג)\n",
-    "monthly_data = filtered_df.groupby('month_year').agg({\n",
-    "    'rating_count': 'sum', \n",
-    "    'rating': 'mean'\n",
-    "}).reset_index().sort_values('month_year')\n",
-    "\n",
-    "# 2. יצירת אובייקט הגרף עם ציר Y כפול\n",
-    "fig_combined = make_subplots(specs=[[{\"secondary_y\": True}]])\n",
-    "\n",
-    "# הוספת גרף ה-Bar (כמות מכירות/ביקורות) - ציר Y שמאלי\n",
-    "fig_combined.add_trace(\n",
-    "    go.Bar(\n",
-    "        x=monthly_data['month_year'],\n",
-    "        y=monthly_data['rating_count'],\n",
-    "        name=\"סך מכירות (Reviews)\",\n",
-    "        marker_color='rgba(0, 102, 204, 0.7)', # כחול אמזון עם שקיפות\n",
-    "    ),\n",
-    "    secondary_y=False,\n",
-    ")\n",
-    "\n",
-    "# הוספת גרף הקו (דירוג ממוצע) - ציר Y ימני\n",
-    "fig_combined.add_trace(\n",
-    "    go.Scatter(\n",
-    "        x=monthly_data['month_year'],\n",
-    "        y=monthly_data['rating'],\n",
-    "        name=\"דירוג ממוצע ⭐\",\n",
-    "        mode='lines+markers',\n",
-    "        line=dict(color='orange', width=4),\n",
-    "        marker=dict(size=10)\n",
-    "    ),\n",
-    "    secondary_y=True,\n",
-    ")\n",
-    "\n",
-    "# 3. עיצוב הגרף והצירים\n",
-    "fig_combined.update_layout(\n",
-    "    title_text=f\"מגמות מכירות ודירוג חודשיות: {selected_cat}\",\n",
-    "    xaxis_title=\"חודש\",\n",
-    "    legend=dict(orientation=\"h\", yanchor=\"bottom\", y=1.02, xanchor=\"right\", x=1),\n",
-    "    height=500\n",
-    ")\n",
-    "\n",
-    "# הגדרת שמות וטווחים לצירים\n",
-    "fig_combined.update_yaxes(title_text=\"<b>סך מכירות</b> (Reviews Count)\", secondary_y=False)\n",
-    "fig_combined.update_yaxes(title_text=\"<b>דירוג ממוצע</b> (Rating)\", secondary_y=True, range=[0, 5])\n",
-    "\n",
-    "# הצגת הגרף ב-Streamlit\n",
-    "st.plotly_chart(fig_combined, use_container_width=True)"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "id": "0129946f-5590-4d2a-af92-da0489fd546d",
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  }
- ],
- "metadata": {
-  "kernelspec": {
-   "display_name": "anaconda-2025.12-py312",
-   "language": "python",
-   "name": "conda-env-anaconda-2025.12-py312-py"
-  },
-  "language_info": {
-   "codemirror_mode": {
-    "name": "ipython",
-    "version": 3
-   },
-   "file_extension": ".py",
-   "mimetype": "text/x-python",
-   "name": "python",
-   "nbconvert_exporter": "python",
-   "pygments_lexer": "ipython3",
-   "version": "3.12.12"
-  }
- },
- "nbformat": 4,
- "nbformat_minor": 5
-}
+import streamlit as st
+import pandas as pd
+import plotly.graph_objects as go
+from plotly.subplots import make_subplots
+
+# הגדרות דף
+st.set_page_config(page_title="Amazon Business Dashboard", layout="wide")
+
+@st.cache_data
+def load_data():
+    # טעינת הקובץ הנקי
+    df = pd.read_csv('amazon_cleaned.csv')
+    df['order_date'] = pd.to_datetime(df['order_date'], errors='coerce')
+    return df
+
+try:
+    df = load_data()
+    
+    st.title("📊 Amazon Business Insights Dashboard")
+
+    # סרגל צד לבחירת קטגוריה
+    categories = sorted(df['main_category'].dropna().unique())
+    selected_cat = st.sidebar.selectbox("בחר קטגוריה לניתוח:", categories)
+
+    # סינון הנתונים לפי בחירה
+    filtered_df = df[df['main_category'] == selected_cat].copy()
+
+    if not filtered_df.empty:
+        # --- חלק 1: מד אוץ (Gauge Chart) ---
+        avg_rating = filtered_df['rating'].mean()
+        
+        fig_gauge = go.Figure(go.Indicator(
+            mode = "gauge+number",
+            value = avg_rating,
+            title = {'text': f"מדד איכות: {selected_cat}", 'font': {'size': 20}},
+            gauge = {
+                'axis': {'range': [0, 5]},
+                'bar': {'color': "black"},
+                'steps': [
+                    {'range': [0, 3.5], 'color': '#FF4B4B'},
+                    {'range': [3.5, 4.2], 'color': '#FFA500'},
+                    {'range': [4.2, 5], 'color': '#238636'}
+                ],
+                'threshold': {'line': {'color': "white", 'width': 4}, 'value': 4.0}
+            }
+        ))
+        fig_gauge.update_layout(height=350)
+        st.plotly_chart(fig_gauge, use_container_width=True)
+
+        st.markdown("---")
+
+        # --- חלק 2: גרף משולב (Bar + Line) למגמות חודשיות ---
+        st.subheader(f"מגמות מכירות ודירוג: {selected_cat}")
+        
+        # הכנת נתונים חודשיים
+        filtered_df['month_year'] = filtered_df['order_date'].dt.to_period('M').astype(str)
+        monthly_stats = filtered_df.groupby('month_year').agg({
+            'rating_count': 'sum',
+            'rating': 'mean'
+        }).reset_index().sort_values('month_year')
+
+        # יצירת גרף עם ציר Y כפול
+        fig_combo = make_subplots(specs=[[{"secondary_y": True}]])
+
+        # הוספת עמודות (מכירות)
+        fig_combo.add_trace(
+            go.Bar(x=monthly_stats['month_year'], y=monthly_stats['rating_count'], 
+                   name="סך מכירות (Reviews)", marker_color='skyblue', opacity=0.7),
+            secondary_y=False,
+        )
+
+        # הוספת קו (דירוג)
+        fig_combo.add_trace(
+            go.Scatter(x=monthly_stats['month_year'], y=monthly_stats['rating'], 
+                       name="דירוג ממוצע ⭐", mode='lines+markers', line=dict(color='orange', width=3)),
+            secondary_y=True,
+        )
+
+        fig_combo.update_layout(xaxis_title="חודש", height=500, legend=dict(orientation="h", y=1.1, x=0.5))
+        fig_combo.update_yaxes(title_text="סך מכירות", secondary_y=False)
+        fig_combo.update_yaxes(title_text="דירוג ממוצע", range=[0, 5], secondary_y=True)
+
+        st.plotly_chart(fig_combo, use_container_width=True)
+
+    else:
+        st.warning("אין נתונים לקטגוריה זו.")
+
+except Exception as e:
+    st.error(f"שגיאה: {e}")
