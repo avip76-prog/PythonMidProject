@@ -268,7 +268,14 @@
     "    st.error(f\"התרחשה שגיאה בטעינת הנתונים: {e}\")"
    ]
   },
- 
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "0129946f-5590-4d2a-af92-da0489fd546d",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
  ],
  "metadata": {
   "kernelspec": {
