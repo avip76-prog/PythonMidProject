@@ -1,322 +1,174 @@
-{
- "cells": [
-  {
-   "cell_type": "code",
-   "execution_count": 2,
-   "id": "1c535e8f-c1f5-468c-9161-9687544a1907",
-   "metadata": {},
-   "outputs": [
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "2026-03-29 19:40:28.718 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-29 19:40:28.720 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-29 19:40:28.720 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-29 19:40:28.721 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-29 19:40:28.722 No runtime found, using MemoryCacheStorageManager\n",
-      "2026-03-29 19:40:28.737 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-29 19:40:28.737 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-29 19:40:28.738 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-29 19:40:28.739 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-29 19:40:28.740 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-29 19:40:28.741 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-29 19:40:28.742 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-29 19:40:28.743 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-29 19:40:28.743 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-29 19:40:28.744 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-29 19:40:28.746 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-29 19:40:28.747 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-29 19:40:28.747 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-29 19:40:28.748 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-29 19:40:28.754 Please replace `use_container_width` with `width`.\n",
-      "\n",
-      "`use_container_width` will be removed after 2025-12-31.\n",
-      "\n",
-      "For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.\n",
-      "2026-03-29 19:40:28.756 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-29 19:40:28.757 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-29 19:40:28.757 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-29 19:40:28.758 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-29 19:40:28.759 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-29 19:40:28.764 Please replace `use_container_width` with `width`.\n",
-      "\n",
-      "`use_container_width` will be removed after 2025-12-31.\n",
-      "\n",
-      "For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.\n",
-      "2026-03-29 19:40:28.766 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-29 19:40:28.767 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-29 19:40:28.768 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-29 19:40:28.769 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-29 19:40:28.769 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-29 19:40:28.810 Please replace `use_container_width` with `width`.\n",
-      "\n",
-      "`use_container_width` will be removed after 2025-12-31.\n",
-      "\n",
-      "For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.\n",
-      "2026-03-29 19:40:28.814 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-29 19:40:28.815 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-29 19:40:28.816 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-29 19:40:28.816 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-29 19:40:28.817 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-29 19:40:28.818 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-29 19:40:28.818 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-29 19:40:28.819 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-29 19:40:28.820 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-29 19:40:28.820 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-29 19:40:28.821 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-29 19:40:28.822 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-29 19:40:28.823 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-29 19:40:28.823 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-29 19:40:28.824 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-29 19:40:28.824 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-29 19:40:28.824 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-29 19:40:28.826 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-29 19:40:28.826 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-29 19:40:28.826 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-29 19:40:28.830 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-29 19:40:28.831 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-29 19:40:28.832 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-29 19:40:28.833 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-29 19:40:28.833 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-29 19:40:28.834 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-29 19:40:28.834 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-29 19:40:28.835 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-29 19:40:28.835 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-29 19:40:28.836 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-29 19:40:28.837 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-29 19:40:28.837 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-29 19:40:28.864 Please replace `use_container_width` with `width`.\n",
-      "\n",
-      "`use_container_width` will be removed after 2025-12-31.\n",
-      "\n",
-      "For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.\n",
-      "2026-03-29 19:40:28.866 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-29 19:40:28.867 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-29 19:40:28.868 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-29 19:40:28.869 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-      "2026-03-29 19:40:28.869 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n"
-     ]
+import streamlit as st
+import pandas as pd
+import plotly.graph_objects as go
+import plotly.express as px
+from plotly.subplots import make_subplots
+
+# 1. הגדרות דף רחב
+st.set_page_config(page_title="Amazon Dashboard", layout="wide")
+
+# עיצוב CSS ליישור לימין, התאמת טבלאות וצמצום רווחים
+st.markdown("""
+    <style>
+    .block-container {
+        padding-top: 1rem;
+        padding-bottom: 0rem;
     }
-   ],
-   "source": [
-    "import streamlit as st\n",
-    "import pandas as pd\n",
-    "import plotly.graph_objects as go\n",
-    "import plotly.express as px\n",
-    "from plotly.subplots import make_subplots\n",
-    "\n",
-    "# 1. הגדרות דף רחב\n",
-    "st.set_page_config(page_title=\"Amazon Dashboard\", layout=\"wide\")\n",
-    "\n",
-    "# עיצוב CSS ליישור לימין, התאמת טבלאות וצמצום רווחים\n",
-    "st.markdown(\"\"\"\n",
-    "    <style>\n",
-    "    .block-container {\n",
-    "        padding-top: 1rem;\n",
-    "        padding-bottom: 0rem;\n",
-    "    }\n",
-    "    .main, .stMarkdown, div[data-testid=\"stExpander\"] {\n",
-    "        direction: rtl;\n",
-    "        text-align: right;\n",
-    "    }\n",
-    "    /* עיצוב טבלה מותאמת אישית ללא אינדקס ומיושרת לימין */\n",
-    "    .custom-table {\n",
-    "        width: 100%;\n",
-    "        border-collapse: collapse;\n",
-    "        direction: rtl;\n",
-    "        text-align: right;\n",
-    "        margin-bottom: 20px;\n",
-    "    }\n",
-    "    .custom-table th, .custom-table td {\n",
-    "        padding: 12px;\n",
-    "        border-bottom: 1px solid #ddd;\n",
-    "        text-align: right;\n",
-    "    }\n",
-    "    </style>\n",
-    "    \"\"\", unsafe_allow_html=True)\n",
-    "\n",
-    "@st.cache_data\n",
-    "def load_data():\n",
-    "    df = pd.read_csv('amazon_cleaned.csv')\n",
-    "    df.columns = df.columns.str.strip()\n",
-    "    df['order_date'] = pd.to_datetime(df['order_date'], dayfirst=True, errors='coerce')\n",
-    "    return df\n",
-    "\n",
-    "try:\n",
-    "    df = load_data()\n",
-    "    st.markdown(\"<h1 style='text-align: right;'>📊 Amazon Business Insights Dashboard</h1>\", unsafe_allow_html=True)\n",
-    "\n",
-    "    # סינון לפי קטגוריה\n",
-    "    categories = sorted(df['main_category'].dropna().unique())\n",
-    "    selected_cat = st.sidebar.selectbox(\"בחר קטגוריה\", categories)\n",
-    "    filtered_df = df[df['main_category'] == selected_cat].copy()\n",
-    "\n",
-    "    if not filtered_df.empty:\n",
-    "        charts_height = 400 \n",
-    "        col1, col2, col3 = st.columns([1, 1, 1])\n",
-    "\n",
-    "        # --- עמודה 1: מדד איכות ---\n",
-    "        with col1:\n",
-    "            avg_rating = filtered_df['rating'].mean()\n",
-    "            fig_gauge_rating = go.Figure(go.Indicator(\n",
-    "                mode = \"gauge+number\", value = avg_rating,\n",
-    "                title = {'text': \"מדד איכות ממוצע\", 'font': {'size': 20}},\n",
-    "                gauge = {\n",
-    "                    'axis': {'range': [0, 5]}, \n",
-    "                    'bar': {'color': \"black\"},\n",
-    "                    'steps': [\n",
-    "                        {'range': [0, 3.5], 'color': '#FF4B4B'},\n",
-    "                        {'range': [3.5, 4.2], 'color': '#FFD700'},\n",
-    "                        {'range': [4.2, 5], 'color': '#238636'}\n",
-    "                    ]\n",
-    "                }\n",
-    "            ))\n",
-    "            fig_gauge_rating.update_layout(height=charts_height, margin=dict(t=80, b=20, l=30, r=30))\n",
-    "            st.plotly_chart(fig_gauge_rating, use_container_width=True)\n",
-    "\n",
-    "        # --- עמודה 2: בריאות המלאי ---\n",
-    "        with col2:\n",
-    "            total_items = len(filtered_df)\n",
-    "            healthy_items = len(filtered_df[filtered_df['rating'] >= 4.0])\n",
-    "            health_score = (healthy_items / total_items) * 100 if total_items > 0 else 0\n",
-    "            \n",
-    "            fig_gauge_inv = go.Figure(go.Indicator(\n",
-    "                mode = \"gauge+number\", value = health_score, number = {'suffix': \"%\"},\n",
-    "                title = {'text': \"בריאות המלאי (Rating > 4.0)\", 'font': {'size': 20}},\n",
-    "                gauge = {\n",
-    "                    'axis': {'range': [0, 100]}, \n",
-    "                    'bar': {'color': \"black\"},\n",
-    "                    'steps': [\n",
-    "                        {'range': [0, 40], 'color': '#FF4B4B'},\n",
-    "                        {'range': [40, 75], 'color': '#FFD700'},\n",
-    "                        {'range': [75, 100], 'color': '#238636'}\n",
-    "                    ]\n",
-    "                }\n",
-    "            ))\n",
-    "            fig_gauge_inv.update_layout(height=charts_height, margin=dict(t=80, b=20, l=30, r=30))\n",
-    "            st.plotly_chart(fig_gauge_inv, use_container_width=True)\n",
-    "\n",
-    "        # --- עמודה 3: דומיננטיות מותגים (תיקון גרף הפאי) ---\n",
-    "        with col3:\n",
-    "            filtered_df['brand'] = filtered_df['product_name'].str.split().str[0]\n",
-    "            brand_stats = filtered_df.groupby('brand')['rating_count'].sum().nlargest(7).reset_index()\n",
-    "            fig_pie = px.pie(brand_stats, values='rating_count', names='brand', \n",
-    "                             title=\"דומיננטיות מותגים (Reviews)\")\n",
-    "            # תיקון המקרא (Legend) כדי שלא יסתיר את הגרף\n",
-    "            fig_pie.update_layout(\n",
-    "                height=charts_height, \n",
-    "                margin=dict(t=80, b=80, l=10, r=10),\n",
-    "                legend=dict(orientation=\"h\", yanchor=\"top\", y=-0.1, xanchor=\"center\", x=0.5)\n",
-    "            )\n",
-    "            st.plotly_chart(fig_pie, use_container_width=True)\n",
-    "\n",
-    "        st.markdown(\"---\")\n",
-    "\n",
-    "        # --- שיפור: נתונים כלליים לקטגוריה (יישור לימין וללא אינדקס) ---\n",
-    "        st.markdown(\"<h3 style='text-align: right;'>📋 נתונים כלליים לקטגוריה</h3>\", unsafe_allow_html=True)\n",
-    "        \n",
-    "        # יצירת טבלה ידנית ב-HTML כדי לשלוט בעיצוב ולהסיר עמודות מיותרות\n",
-    "        st.markdown(f\"\"\"\n",
-    "        <table class=\"custom-table\">\n",
-    "            <tr>\n",
-    "                <th>כמות דירוגים</th>\n",
-    "                <th>כמות מוצרים</th>\n",
-    "                <th>דירוג ממוצע</th>\n",
-    "            </tr>\n",
-    "            <tr>\n",
-    "                <td>{filtered_df['rating_count'].sum():,.0f}</td>\n",
-    "                <td>{len(filtered_df):,}</td>\n",
-    "                <td>{avg_rating:.2f} ⭐</td>\n",
-    "            </tr>\n",
-    "        </table>\n",
-    "        \"\"\", unsafe_allow_html=True)\n",
-    "\n",
-    "        st.markdown(\"---\")\n",
-    "\n",
-    "        # --- כיצד חושב מדד בריאות המלאי ---\n",
-    "        st.markdown(\"<h3 style='text-align: right;'>💡 כיצד חושב מדד בריאות המלאי?</h3>\", unsafe_allow_html=True)\n",
-    "        poor = filtered_df[filtered_df['rating'] < 3.5]\n",
-    "        fair = filtered_df[(filtered_df['rating'] >= 3.5) & (filtered_df['rating'] < 4.0)]\n",
-    "        good = filtered_df[filtered_df['rating'] >= 4.0]\n",
-    "\n",
-    "        # גם כאן נשתמש ב-HTML כדי לוודא יישור לימין ללא אינדקס\n",
-    "        st.markdown(f\"\"\"\n",
-    "        <table class=\"custom-table\">\n",
-    "            <tr>\n",
-    "                <th>קטגוריית איכות</th>\n",
-    "                <th>כמות מוצרים</th>\n",
-    "                <th>אחוז מהמלאי</th>\n",
-    "                <th>השפעה על המדד</th>\n",
-    "            </tr>\n",
-    "            <tr>\n",
-    "                <td>🔴 סיכון גבוה (Rating < 3.5)</td>\n",
-    "                <td>{len(poor)}</td>\n",
-    "                <td>{(len(poor)/total_items)*100:.1f}%</td>\n",
-    "                <td>לא נספר במדד</td>\n",
-    "            </tr>\n",
-    "            <tr>\n",
-    "                <td>🟡 דורש מעקב (3.5 - 4.0)</td>\n",
-    "                <td>{len(fair)}</td>\n",
-    "                <td>{(len(fair)/total_items)*100:.1f}%</td>\n",
-    "                <td>לא נספר במדד</td>\n",
-    "            </tr>\n",
-    "            <tr>\n",
-    "                <td>🟢 מלאי בריא (Rating >= 4.0)</td>\n",
-    "                <td>{len(good)}</td>\n",
-    "                <td>{(len(good)/total_items)*100:.1f}%</td>\n",
-    "                <td>מהווה את אחוז המדד</td>\n",
-    "            </tr>\n",
-    "        </table>\n",
-    "        \"\"\", unsafe_allow_html=True)\n",
-    "        \n",
-    "        st.info(f\"חישוב המדד: {len(good)} מוצרים בריאים מתוך {total_items} סך הכל = **{health_score:.1f}%**\")\n",
-    "\n",
-    "        st.markdown(\"---\")\n",
-    "        \n",
-    "        # גרף מגמות\n",
-    "        st.markdown(f\"<h3 style='text-align: right;'>📈 מגמות חודשיות: {selected_cat}</h3>\", unsafe_allow_html=True)\n",
-    "        filtered_df['month_year'] = filtered_df['order_date'].dt.to_period('M').astype(str)\n",
-    "        monthly = filtered_df.groupby('month_year').agg({'rating_count': 'sum', 'rating': 'mean'}).reset_index()\n",
-    "        \n",
-    "        fig_trend = make_subplots(specs=[[{\"secondary_y\": True}]])\n",
-    "        fig_trend.add_trace(go.Bar(x=monthly['month_year'], y=monthly['rating_count'], name=\"דירוגים\"), secondary_y=False)\n",
-    "        fig_trend.add_trace(go.Scatter(x=monthly['month_year'], y=monthly['rating'], name=\"דירוג ממוצע\", line=dict(color='orange', width=3)), secondary_y=True)\n",
-    "        fig_trend.update_layout(height=450, legend=dict(orientation=\"h\", y=1.1, x=0.5, xanchor=\"center\"))\n",
-    "        st.plotly_chart(fig_trend, use_container_width=True)\n",
-    "\n",
-    "except Exception as e:\n",
-    "    st.error(f\"שגיאה: {e}\")"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "id": "0129946f-5590-4d2a-af92-da0489fd546d",
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  }
- ],
- "metadata": {
-  "kernelspec": {
-   "display_name": "anaconda-2025.12-py312",
-   "language": "python",
-   "name": "conda-env-anaconda-2025.12-py312-py"
-  },
-  "language_info": {
-   "codemirror_mode": {
-    "name": "ipython",
-    "version": 3
-   },
-   "file_extension": ".py",
-   "mimetype": "text/x-python",
-   "name": "python",
-   "nbconvert_exporter": "python",
-   "pygments_lexer": "ipython3",
-   "version": "3.12.12"
-  }
- },
- "nbformat": 4,
- "nbformat_minor": 5
-}
+    .main, .stMarkdown {
+        direction: rtl;
+        text-align: right;
+    }
+    .custom-table {
+        width: 100%;
+        border-collapse: collapse;
+        direction: rtl;
+        text-align: right;
+        margin-bottom: 20px;
+    }
+    .custom-table th, .custom-table td {
+        padding: 12px;
+        border-bottom: 1px solid #ddd;
+        text-align: right;
+    }
+    </style>
+    """, unsafe_allow_html=True)
+
+@st.cache_data
+def load_data():
+    df = pd.read_csv('amazon_cleaned.csv')
+    df.columns = df.columns.str.strip()
+    df['order_date'] = pd.to_datetime(df['order_date'], dayfirst=True, errors='coerce')
+    return df
+
+try:
+    df = load_data()
+    st.markdown("<h1 style='text-align: right;'>📊 Amazon Business Insights Dashboard</h1>", unsafe_allow_html=True)
+
+    # סינון לפי קטגוריה
+    categories = sorted(df['main_category'].dropna().unique())
+    selected_cat = st.sidebar.selectbox("בחר קטגוריה", categories)
+    filtered_df = df[df['main_category'] == selected_cat].copy()
+
+    if not filtered_df.empty:
+        charts_height = 400 
+        col1, col2, col3 = st.columns([1, 1, 1])
+
+        with col1:
+            avg_rating = filtered_df['rating'].mean()
+            fig_gauge_rating = go.Figure(go.Indicator(
+                mode = "gauge+number", value = avg_rating,
+                title = {'text': "מדד איכות ממוצע", 'font': {'size': 20}},
+                gauge = {
+                    'axis': {'range': [0, 5]}, 
+                    'bar': {'color': "black"},
+                    'steps': [
+                        {'range': [0, 3.5], 'color': '#FF4B4B'},
+                        {'range': [3.5, 4.2], 'color': '#FFD700'},
+                        {'range': [4.2, 5], 'color': '#238636'}
+                    ]
+                }
+            ))
+            fig_gauge_rating.update_layout(height=charts_height, margin=dict(t=80, b=20, l=30, r=30))
+            st.plotly_chart(fig_gauge_rating, use_container_width=True)
+
+        with col2:
+            total_items = len(filtered_df)
+            healthy_items = len(filtered_df[filtered_df['rating'] >= 4.0])
+            health_score = (healthy_items / total_items) * 100 if total_items > 0 else 0
+            
+            fig_gauge_inv = go.Figure(go.Indicator(
+                mode = "gauge+number", value = health_score, number = {'suffix': "%"},
+                title = {'text': "בריאות המלאי (Rating > 4.0)", 'font': {'size': 20}},
+                gauge = {
+                    'axis': {'range': [0, 100]}, 
+                    'bar': {'color': "black"},
+                    'steps': [
+                        {'range': [0, 40], 'color': '#FF4B4B'},
+                        {'range': [40, 75], 'color': '#FFD700'},
+                        {'range': [75, 100], 'color': '#238636'}
+                    ]
+                }
+            ))
+            fig_gauge_inv.update_layout(height=charts_height, margin=dict(t=80, b=20, l=30, r=30))
+            st.plotly_chart(fig_gauge_inv, use_container_width=True)
+
+        with col3:
+            filtered_df['brand'] = filtered_df['product_name'].str.split().str[0]
+            brand_stats = filtered_df.groupby('brand')['rating_count'].sum().nlargest(7).reset_index()
+            fig_pie = px.pie(brand_stats, values='rating_count', names='brand', 
+                             title="דומיננטיות מותגים (Reviews)")
+            fig_pie.update_layout(
+                height=charts_height, 
+                margin=dict(t=80, b=80, l=10, r=10),
+                legend=dict(orientation="h", yanchor="top", y=-0.1, xanchor="center", x=0.5)
+            )
+            st.plotly_chart(fig_pie, use_container_width=True)
+
+        st.markdown("---")
+        st.markdown("<h3 style='text-align: right;'>📋 נתונים כלליים לקטגוריה</h3>", unsafe_allow_html=True)
+        
+        st.markdown(f"""
+        <table class="custom-table">
+            <tr>
+                <th>כמות דירוגים</th>
+                <th>כמות מוצרים</th>
+                <th>דירוג ממוצע</th>
+            </tr>
+            <tr>
+                <td>{filtered_df['rating_count'].sum():,.0f}</td>
+                <td>{len(filtered_df):,}</td>
+                <td>{avg_rating:.2f} ⭐</td>
+            </tr>
+        </table>
+        """, unsafe_allow_html=True)
+
+        st.markdown("---")
+        st.markdown("<h3 style='text-align: right;'>💡 כיצד חושב מדד בריאות המלאי?</h3>", unsafe_allow_html=True)
+        poor = filtered_df[filtered_df['rating'] < 3.5]
+        fair = filtered_df[(filtered_df['rating'] >= 3.5) & (filtered_df['rating'] < 4.0)]
+        good = filtered_df[filtered_df['rating'] >= 4.0]
+
+        st.markdown(f"""
+        <table class="custom-table">
+            <tr>
+                <th>קטגוריית איכות</th>
+                <th>כמות מוצרים</th>
+                <th>אחוז מהמלאי</th>
+                <th>השפעה על המדד</th>
+            </tr>
+            <tr>
+                <td>🔴 סיכון גבוה (Rating < 3.5)</td>
+                <td>{len(poor)}</td>
+                <td>{(len(poor)/total_items)*100:.1f}%</td>
+                <td>לא נספר במדד</td>
+            </tr>
+            <tr>
+                <td>🟡 דורש מעקב (3.5 - 4.0)</td>
+                <td>{len(fair)}</td>
+                <td>{(len(fair)/total_items)*100:.1f}%</td>
+                <td>לא נספר במדד</td>
+            </tr>
+            <tr>
+                <td>🟢 מלאי בריא (Rating >= 4.0)</td>
+                <td>{len(good)}</td>
+                <td>{(len(good)/total_items)*100:.1f}%</td>
+                <td>מהווה את אחוז המדד</td>
+            </tr>
+        </table>
+        """, unsafe_allow_html=True)
+        
+        st.info(f"חישוב המדד: {len(good)} מוצרים בריאים מתוך {total_items} סך הכל = **{health_score:.1f}%**")
+
+        st.markdown("---")
+        st.markdown(f"<h3 style='text-align: right;'>📈 מגמות חודשיות: {selected_cat}</h3>", unsafe_allow_html=True)
+        filtered_df['month_year'] = filtered_df['order_date'].dt.to_period('M').astype(str)
+        monthly = filtered_df.groupby('month_year').agg({'rating_count': 'sum', 'rating': 'mean'}).reset_index()
+        
+        fig_trend = make_subplots(specs=[[{"secondary_y": True}]])
+        fig_trend.add_trace(go.Bar(x=monthly['month_year'], y=monthly['rating_count'], name="דירוגים"), secondary_y=False)
+        fig_trend.add_trace(go.Scatter(x=monthly['month_year'], y=monthly['rating'], name="דירוג ממוצע", line=dict(color='orange', width=3)), secondary_y=True)
+        fig_trend.update_layout(height=450, legend=dict(orientation="h", y=1.1, x=0.5, xanchor="center"))
+        st.plotly_chart(fig_trend, use_container_width=True)
+
+except Exception as e:
+    st.error(f"שגיאה: {e}")
